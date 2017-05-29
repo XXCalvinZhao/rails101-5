@@ -18,8 +18,9 @@ class PostsController < ApplicationController
     @post.group = @group
     @post.user = current_user
 
-    if @post.save
-      redirect_to group_path(@group)
+    if @post.update(post_params)
+      redirect_to account_posts_path, notice: 'update success'
+      group_path(@group)
     else
       render :edit
     end
