@@ -40,6 +40,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'will_paginate'
 gem 'awesome_rails_console'
+gem 'rucaptcha'
+gem 'dalli'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
