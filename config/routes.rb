@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+   devise_for :user, controllers: {
+     passwords: 'users/passwords',
+     registrations: 'users/registrations',
+     sessions: 'users/sessions'
+   }
+  
   resources :groups do
     member do
       post :join
